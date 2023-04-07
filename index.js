@@ -14,4 +14,4 @@ app.get("/", function (req, res) {
   res.send("Hello World");
 });
 
-app.listen("http://195.140.146.182/", () => console.log("server start"));
+app.listen(8080, () => console.log("server start"));
