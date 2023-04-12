@@ -73,7 +73,7 @@ app.post("/", async (req, res) => {
   }
 });
 
-console.log("start");
+console.log("sort");
 
 app.get("*", function (req, res) {
   res.sendFile(indexPath);
