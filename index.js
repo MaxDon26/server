@@ -5,6 +5,7 @@ const axios = require("axios");
 const app = express();
 require("dotenv").config();
 const path = require("path");
+const { log } = require("console");
 
 const APIKEY = process.env.API_KEY;
 
@@ -71,6 +72,8 @@ app.post("/", async (req, res) => {
     res.json(error);
   }
 });
+
+console.log("start");
 
 app.get("*", function (req, res) {
   res.sendFile(indexPath);
