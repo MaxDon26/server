@@ -76,4 +76,4 @@ app.get("*", function (req, res) {
   res.sendFile(indexPath);
 });
 
-app.listen(80, () => console.log("server start"));
+app.listen(443, () => console.log("server start"));
