@@ -15,10 +15,12 @@ const transporter = nodemailer.createTransport(
   }
 );
 
-const mailer = (message) =>
+const mailer = (message) => {
   transporter.sendMail(message, (err, info) => {
     if (err) return console.log(err);
     console.log(info);
   });
+  transporter.close();
+};
 
 module.exports = mailer;
