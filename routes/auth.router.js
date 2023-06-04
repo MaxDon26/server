@@ -54,17 +54,15 @@ router.post("/signUp", async (req, res) => {
       }
     );
 
-    console.log(data);
-
-    // await axios.put(
-    //   `https://freelancer-99d6f-default-rtdb.europe-west1.firebasedatabase.app/users/${data.localId}.json`,
-    //   {
-    //     id: data.localId,
-    //     email,
-    //     created: Date.now(),
-    //     isActive: false,
-    //   }
-    // );
+    await axios.put(
+      `https://freelancer-99d6f-default-rtdb.europe-west1.firebasedatabase.app/users/${data.localId}.json`,
+      {
+        id: data.localId,
+        email,
+        created: Date.now(),
+        isActive: false,
+      }
+    );
     mailer(message);
   } catch (error) {
     console.log(error.response.data.error);
