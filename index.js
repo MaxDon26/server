@@ -2,12 +2,14 @@ const express = require("express");
 const cors = require("cors");
 const routes = require("./routes");
 const app = express();
+const bodyParser = require("body-parser");
 require("dotenv").config();
 const path = require("path");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cors());
+
+// app.use(cors());
 
 app.use("/api", routes);
 
